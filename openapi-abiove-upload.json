@@ -1,0 +1,49 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "ABIOVE API",
+    "version": "1.0.0",
+    "description": "Abiove - Associação Brasileira das Indústrias de Óleos Vegetais, fornece dados sobre a produção e exportação de óleos vegetais no Brasil."
+  },
+  "servers": [
+    {
+      "url": "https://api.abiove.org.br",
+      "description": "Mock da API da ABIOVE"
+    }
+  ],
+  "paths": {
+    "/abiove/producao": {
+      "get": {
+        "summary": "Descrição do endpoint de produção de óleos vegetais",
+        "responses": {
+          "200": {
+            "description": "Retorna a descrição da ABIOVE",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "descricao": {
+                      "type": "string"
+                    },
+                    "fonte": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "descricao": "Abiove - Associação Brasileira das Indústrias de Óleos Vegetais, fornece dados sobre a produção e exportação de óleos vegetais no Brasil.",
+                  "fonte": "ABIOVE",
+                  "status": "Em desenvolvimento"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
